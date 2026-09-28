@@ -1,0 +1,102 @@
+
+/* ==========================================================================
+   Admin Luxury Pagination — eGreen Basket MarketLink
+   ========================================================================== */
+
+/* Wrapper */
+.admin-pagination-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--admin-border);
+  background: #FAFAF9;
+  border-radius: 0 0 16px 16px;
+}
+
+.admin-pagination-info {
+  font-size: 0.8rem;
+  color: var(--admin-text-muted);
+  font-weight: 500;
+}
+
+/* Pagination List */
+.admin-pagination-wrapper .pagination {
+  margin: 0;
+  gap: 4px;
+  display: flex;
+  align-items: center;
+}
+
+/* Every page item */
+.admin-pagination-wrapper .page-item .page-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  border-radius: 10px !important;
+  border: 1.5px solid var(--admin-border) !important;
+  background: #FFFFFF;
+  color: var(--admin-text-dark);
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: var(--admin-font-sans);
+  text-decoration: none;
+  transition: all 0.18s ease;
+  box-shadow: none;
+  line-height: 1;
+}
+
+/* Hover state */
+.admin-pagination-wrapper .page-item .page-link:hover {
+  background: var(--admin-success-soft);
+  border-color: var(--admin-emerald-border) !important;
+  color: var(--admin-forest);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(22, 132, 91, 0.12);
+}
+
+/* Active / current page */
+.admin-pagination-wrapper .page-item.active .page-link {
+  background: linear-gradient(135deg, var(--admin-forest), var(--admin-emerald)) !important;
+  border-color: transparent !important;
+  color: #FFFFFF !important;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(22, 132, 91, 0.35);
+  transform: none;
+  pointer-events: none;
+}
+
+/* Disabled (prev/next when on first/last page) */
+.admin-pagination-wrapper .page-item.disabled .page-link {
+  background: var(--admin-bg) !important;
+  border-color: var(--admin-border) !important;
+  color: var(--admin-text-muted) !important;
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Ellipsis "..." span */
+.admin-pagination-wrapper .page-item.disabled .page-link[aria-disabled="true"],
+.admin-pagination-wrapper span.page-link {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--admin-text-muted) !important;
+  cursor: default;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+/* Prev / Next arrow pages — slightly wider */
+.admin-pagination-wrapper .page-item:first-child .page-link,
+.admin-pagination-wrapper .page-item:last-child .page-link {
+  padding: 0 14px;
+  font-size: 0.88rem;
+}
+
